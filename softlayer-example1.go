@@ -16,7 +16,7 @@ func main() {
         vms, _ := service.Mask("id,hostname,domain,primaryIpAddress,primaryBackendIpAddress,accountId,billingItem[orderItem[order[userRecord[username]]]]").GetVirtualGuests()
 
         for _, vm := range vms {
-/* Redundant check
+/* Redundant check for nil
                 var primaryIpAddress = ""
                 if vm.PrimaryIpAddress != nil {
                         primaryIpAddress = *vm.PrimaryIpAddress
